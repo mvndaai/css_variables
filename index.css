@@ -1,25 +1,74 @@
 :root {
-    --body-background-color: lightgray;
-    --navbar-background-color: cyan;
-    --theme-background-color: aqua;
-    --link-color: blue;
+    --rem-size: 16px;
+    --font-family: monospace;
+    --padding: 10px;
+
+    --color-1: white;
+    --color-2: #901910;
+    --color-3: rgb(112, 128, 144);
+    --color-link: lightgreen;
+
+    --paragraph-border-width: 5px;
+    --paragraph-border-style: solid;
+    --paragraph-border-radius: 10px;
+}
+
+html {
+    font-size: var(--rem-size);
 }
 
 body {
-    background-color: var(--body-background-color);
-    /* margin: 0; */
+    margin: 0;
+    background-color: var(--color-1);
+    color: var(--color-2);
+    font-family: var(--font-family);
 }
 
-header {
-    background-color: var(--navbar-background-color);
+nav {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    padding: var(--padding);
 }
 
-a {
-    color: var(--link-color);
+h1 { color: var(--color-3); }
+a { color: var(--color-link); }
+
+p {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    padding: var(--padding);
+    border: var(--paragraph-border-width) var(--paragraph-border-style) var(--color-3);
+    border-radius: var(--paragraph-border-radius);
 }
 
-.theme {
+/* Nothing important below */
+
+main { margin: 1rem; }
+
+#variable_list {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: var(--theme-background-color);
+
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px gray;
+    padding: 10px;
+
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.persist_box { margin-bottom: 5px; }
+
+.var_box {
+    display: flex;
+    justify-content: space-between;
 }
