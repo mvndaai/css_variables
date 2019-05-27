@@ -11,9 +11,29 @@
 
         <nav>Navigation Bar</nav>
         <main>
-            <h1>Heading</h1>
-            <p>Paragraph including a <a href="https://github.com/mvndaai/css_variables" target="_blank"rel="noopener">github link</a>.</p>
-            <p>An <a href="#">empty link</a> and a useless <button>button</button></p>
+            <h1>Dynamic Themes Using CSS Variables</h1>
+            <div class="box">
+                <p>
+                    CSS Variables, officially designated <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank"rel="noopener">
+                        Custom Properties</a>, can let you create dynamic themes of your website.
+                        They are <a href="https://caniuse.com/#feat=css-variables" target="_blank"rel="noopener">supported</a> in all current browsers.
+                </p>
+                <p>
+                    Adding them is simple:
+                    <ul>
+                        <li>In a css file just add a <code>:root</code> element.</li>
+                        <li>In your <code>:root</code> element define your variables with a prefix <code>--</code>.</li>
+                        <li>Variables can be used as values anywhere within your css <code>var("--variable-name")</code>.</li>
+                        <li>In Javascript use <code>document.documentElement.style.setProperty('--variable-name', value)</code>
+                            to change the variable value.</li>
+                    </ul>
+                </p>
+                <p>
+                    Use the floating box to theme this page.
+                </p>
+            </div>
+            <div class="box">Look at the <a href="https://github.com/mvndaai/css_variables" target="_blank"rel="noopener">repo</a>
+                of this page to see an example of how to add them to your page.</div>
         </main>
     </body>
     <script type="module"> import './index.js';</script>

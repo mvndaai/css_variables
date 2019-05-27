@@ -1,6 +1,6 @@
 :root {
     --rem-size: 16px;
-    --font-family: monospace;
+    --font-family: Helvetica;
     --padding: 10px;
 
     --color-1: white;
@@ -19,6 +19,7 @@ html {
 
 body {
     margin: 0;
+    min-height: 800px;
     background-color: var(--color-1);
     color: var(--color-2);
     font-family: var(--font-family);
@@ -33,20 +34,33 @@ nav {
 h1 { color: var(--color-3); }
 a { color: var(--color-link); }
 
-p {
+.box {
     background-color: var(--color-2);
     color: var(--color-1);
     padding: var(--padding);
     border: var(--paragraph-border-width) var(--paragraph-border-style) var(--color-3);
     border-radius: var(--paragraph-border-radius);
+    margin: var(--padding) 0;
+}
+
+code {
+    background-color: var(--color-1);
+    color: var(--color-2);
+    border-radius: 4px;
+    font-family: monospace;
+    padding: 0 2px;
+    margin: 0 2px;
 }
 
 /* Nothing important below */
 
 main { margin: 1rem; }
 
+ul { margin: 0; }
+li {margin: 4px 0; }
+
 #variable_list {
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     right: 10px;
 
